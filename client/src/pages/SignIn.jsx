@@ -1,13 +1,12 @@
-import React from "react"
-import MainLayout from "../layouts/MainLayout.jsx"
+import React, { useState } from "react"
 import { useDispatch } from "react-redux"
 import { signIn } from "../stores/auth.jsx"
-import { useState } from "react"
+import MainLayout from "../layouts/MainLayout.jsx"
 
 const SignIn = () => {
+    const dispatch = useDispatch()
     const [email, setEmail] = useState("tony@stark.com")
     const [password, setPassword] = useState("password123")
-    const dispatch = useDispatch()
 
     return (
         <MainLayout>
